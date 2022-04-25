@@ -1,0 +1,360 @@
+html, body {
+    margin: 0;
+    height: 100%;
+}
+@media only screen and (min-width: 980px) {
+#camera-body {
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+#display {
+	background-color: aqua;
+	position:absolute;
+	width: 50%;
+	height: 50%;
+  	left: 45%;
+  	top: 50%;
+  	-webkit-transform: translate(-50%, -50%);
+  	transform: translate(-50%, -50%);
+}
+#bg-image {
+	z-index: -999;
+	position: absolute;
+	top: -10%;
+	width: 100%;
+	height: 100%;
+	background-color: blue;
+}
+#style-cont {
+	z-index: -9999;
+	position: absolute;
+	width: 100%;
+	height: 120%;
+  	left: 50%;
+  	top: 50%;
+	background-color: cadetblue;
+	-webkit-transform: translate(-50%, -50%);
+  	transform: translate(-50%, -50%);
+}
+#set-panel {
+	display: flex;
+	flex-direction: column;
+	background-color: aquamarine;
+	position:absolute;
+	width: 25%;
+	height: 60%;
+  	left: 85%;
+  	top: 50%;
+  	-webkit-transform: translate(-50%, -50%);
+  	transform: translate(-50%, -50%);
+}
+#zoom-panel {
+	background-color: chocolate;
+	position:absolute;
+	width: 15%;
+	height: 60%;
+  	left: 10%;
+  	top: 50%;
+  	-webkit-transform: translate(-50%, -50%);
+  	transform: translate(-50%, -50%);
+}
+#button-col {
+	margin-top: auto;
+}
+.shutter-button {
+	position: absolute;
+	top: 30%;
+	left: 15%;
+	border: none;
+	padding: 0;
+	width: 25%;
+	aspect-ratio: 1 / 1;
+	border-radius: 116.053px;
+}
+.aperture-button {
+	position: absolute;
+	top: 60%;
+	left: 15%;
+	border: none;
+	padding: 0;
+	width: 25%;
+	aspect-ratio: 1 / 1;
+	border-radius: 116.053px;
+}
+.mode-button {
+	position: absolute;
+	top: 45%;
+	left: 50%;
+	border: none;
+	padding: 0;
+	width: 30%;
+	aspect-ratio: 1 / 1;
+	border-radius: 116.053px;
+}
+.light-button {
+	position: absolute;
+	top: 75%;
+	left: 45%;
+	border: none;
+	padding: 0;
+	width: 15%;
+	aspect-ratio: 1 / 1;
+	border-radius: 116.053px;
+}
+.iso-button {
+	position: absolute;
+	top: 28%;
+	left: 55%;
+	border: none;
+	padding: 0;
+	width: 20%;
+	height: 7%;
+	aspect-ratio: 1 / 1;
+	border-radius: 53.8097px;
+}
+.back-button {
+	position: absolute;
+	top: 2%;
+	left: 5%;
+	border: none;
+	padding: 0;
+	width: 10%;
+	height: 5%;
+	aspect-ratio: 1 / 1;
+	border-radius: 53.8097px;
+}
+.next-button {
+	position: absolute;
+	top: 2%;
+	left: 18%;
+	border: none;
+	padding: 0;
+	width: 10%;
+	height: 5%;
+	aspect-ratio: 1 / 1;
+	border-radius: 53.8097px;
+}
+.shoot-button {
+	position: absolute;
+	top: 2%;
+	left: 70%;
+	border: none;
+	padding: 0;
+	width: 20%;
+	height: 10%;
+	aspect-ratio: 1 / 1;
+	border-radius: 53.8097px;
+}
+.distance-button {
+	position: absolute;
+	top: 95%;
+	left: 2%;
+	border: none;
+	padding: 0;
+	width: 96%;
+	height: 10%;
+	aspect-ratio: 1 / 1;
+	border-radius: 53.8097px;
+}
+.focus-button {
+	position: absolute;
+	top: 5%;
+	left: 62%;
+	border: none;
+	padding: 0;
+	width: 25%;
+	height: 90%;
+	aspect-ratio: 1 / 1;
+	border-radius: 53.8097px;
+}
+.zoom-button {
+	position: absolute;
+	top: 5%;
+	left: 12%;
+	border: none;
+	padding: 0;
+	width: 40%;
+	height: 90%;
+	aspect-ratio: 1 / 1;
+	border-radius: 35px;
+}
+}
+@media only screen and (min-width: 0px) and (max-width: 980px) and (orientation: landscape) {
+	#camera-body {
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+#display {
+	background-color: aqua;
+	position:absolute;
+	width: 50%;
+	height: 50%;
+  	left: 27%;
+  	top: 50%;
+  	-webkit-transform: translate(-50%, -50%);
+  	transform: translate(-50%, -50%);
+}
+#bg-image {
+	z-index: -999;
+	position: absolute;
+	top: -10%;
+	width: 100%;
+	height: 100%;
+	background-color: blue;
+}
+#style-cont {
+	z-index: -9999;
+	position: absolute;
+	width: 100%;
+	height: 120%;
+  	left: 50%;
+  	top: 50%;
+	background-color: cadetblue;
+	-webkit-transform: translate(-50%, -50%);
+  	transform: translate(-50%, -50%);
+}
+#set-panel {
+	background-color: aquamarine;
+	position:absolute;
+	width: 25%;
+	height: 60%;
+  	left: 85%;
+  	top: 50%;
+  	-webkit-transform: translate(-50%, -50%);
+  	transform: translate(-50%, -50%);
+}
+#zoom-panel {
+	display: flex;
+	flex-direction: column;
+	background-color: chocolate;
+	position:absolute;
+	width: 15%;
+	height: 60%;
+  	left: 62.5%;
+  	top: 50%;
+  	-webkit-transform: translate(-50%, -50%);
+  	transform: translate(-50%, -50%);
+}
+#button-col {
+	margin-top: auto;
+}
+.shutter-button {
+	position: absolute;
+	top: 30%;
+	left: 15%;
+	border: none;
+	padding: 0;
+	width: 25%;
+	aspect-ratio: 1 / 1;
+	border-radius: 116.053px;
+}
+.aperture-button {
+	position: absolute;
+	top: 60%;
+	left: 15%;
+	border: none;
+	padding: 0;
+	width: 25%;
+	aspect-ratio: 1 / 1;
+	border-radius: 116.053px;
+}
+.mode-button {
+	position: absolute;
+	top: 45%;
+	left: 50%;
+	border: none;
+	padding: 0;
+	width: 30%;
+	aspect-ratio: 1 / 1;
+	border-radius: 116.053px;
+}
+.light-button {
+	position: absolute;
+	top: 75%;
+	left: 45%;
+	border: none;
+	padding: 0;
+	width: 15%;
+	aspect-ratio: 1 / 1;
+	border-radius: 116.053px;
+}
+.iso-button {
+	position: absolute;
+	top: 28%;
+	left: 55%;
+	border: none;
+	padding: 0;
+	width: 20%;
+	height: 7%;
+	aspect-ratio: 1 / 1;
+	border-radius: 53.8097px;
+}
+.back-button {
+	position: absolute;
+	top: 2%;
+	left: 5%;
+	border: none;
+	padding: 0;
+	width: 10%;
+	height: 5%;
+	aspect-ratio: 1 / 1;
+	border-radius: 53.8097px;
+}
+.next-button {
+	position: absolute;
+	top: 2%;
+	left: 18%;
+	border: none;
+	padding: 0;
+	width: 10%;
+	height: 5%;
+	aspect-ratio: 1 / 1;
+	border-radius: 53.8097px;
+}
+.shoot-button {
+	position: absolute;
+	top: 2%;
+	left: 70%;
+	border: none;
+	padding: 0;
+	width: 20%;
+	height: 10%;
+	aspect-ratio: 1 / 1;
+	border-radius: 53.8097px;
+}
+.distance-button {
+	position: absolute;
+	top: 95%;
+	left: 2%;
+	border: none;
+	padding: 0;
+	width: 96%;
+	height: 10%;
+	aspect-ratio: 1 / 1;
+	border-radius: 53.8097px;
+}
+.focus-button {
+	position: absolute;
+	top: 5%;
+	left: 62%;
+	border: none;
+	padding: 0;
+	width: 25%;
+	height: 90%;
+	aspect-ratio: 1 / 1;
+	border-radius: 53.8097px;
+}
+.zoom-button {
+	position: absolute;
+	top: 5%;
+	left: 12%;
+	border: none;
+	padding: 0;
+	width: 40%;
+	height: 90%;
+	aspect-ratio: 1 / 1;
+	border-radius: 35px;
+}
+}
