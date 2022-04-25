@@ -1,0 +1,80 @@
+@charset "utf-8";
+html, body {
+    margin: 0;
+    height: 100%;
+}
+#camera-body {
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+#display {
+	position:absolute;
+	width: 50%;
+	height: 50%;
+  	left: 45%;
+  	top: 50%;
+  	-webkit-transform: translate(-50%, -50%);
+  	transform: translate(-50%, -50%);
+}
+.overlay {
+	z-index: -99;
+	top: -10%;
+	border-radius: 54.5449px;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+#bg-image {
+	z-index: -999;
+	position: absolute;
+	top: -10%;
+	border-radius: 54.5449px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	background-image: url("images/DSC04494.jpg");
+}
+#style-cont {
+	position: absolute;
+	width: 100%;
+	height: 120%;
+	background: linear-gradient(317.7deg, rgba(0, 0, 0, 0.4) 0%, rgba(255, 255, 255, 0.4) 105.18%), #EBECF0;
+	background-blend-mode: soft-light, normal;
+	box-shadow: -12px -12px 23px #FAFBFF, 12px 12px 23px #A6ABBD;
+	border-radius: 54.5449px;
+  	left: 50%;
+  	top: 50%;
+  	-webkit-transform: translate(-50%, -50%);
+  	transform: translate(-50%, -50%);
+	z-index: -9999;
+}
+#set-panel {
+	background: linear-gradient(317.7deg, rgba(0, 0, 0, 0.4) 0%, rgba(255, 255, 255, 0.4) 105.18%), #EBECF0;
+	background-blend-mode: soft-light, normal;
+	box-shadow: -12px -12px 23px #FAFBFF, 12px 12px 23px #A6ABBD;
+	border-radius: 54.5449px;
+	position:absolute;
+	width: 25%;
+	height: 60%;
+  	left: 85%;
+  	top: 50%;
+  	-webkit-transform: translate(-50%, -50%);
+  	transform: translate(-50%, -50%);
+}
+.set-button {
+	border: none;
+	padding: 0;
+	margin-top: 30%;
+	margin-left: 10%;
+	width: 20%;
+	aspect-ratio: 1 / 1;
+background: -webkit-linear-gradient(277deg, rgba(0, 0, 0, 0.4) 0%, rgba(255, 255, 255, 0.4) 105.18), #EBECF0;
+background: -o-linear-gradient(277deg, rgba(0, 0, 0, 0.4) 0%, rgba(255, 255, 255, 0.4) 105.18), #EBECF0;
+background: linear-gradient(7deg, rgba(0, 0, 0, 0.4) 0%, rgba(255, 255, 255, 0.4) 105.18), #EBECF0;
+background-blend-mode: soft-light, normal;
+box-shadow: -12px -12px 23px #FAFBFF, 12px 12px 23px #A6ABBD;
+border-radius: 116.053px;
+
+}
