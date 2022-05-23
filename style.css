@@ -1,8 +1,8 @@
-@charset "utf-8";
 html, body {
     margin: 0;
     height: 100%;
 }
+@media only screen and (min-width: 980px) {
 #camera-body {
 	position: relative;
 	height: 100%;
@@ -17,44 +17,64 @@ html, body {
   	-webkit-transform: translate(-50%, -50%);
   	transform: translate(-50%, -50%);
 }
-.overlay {
-	z-index: -99;
-	top: -10%;
-	border-radius: 54.5449px;
-	position: absolute;
-	width: 100%;
-	height: 100%;
-}
 #bg-image {
-	z-index: -999;
 	position: absolute;
 	top: -10%;
-	border-radius: 54.5449px;
-	background-repeat: no-repeat;
-	background-size: cover;
 	width: 100%;
 	height: 100%;
-	background-image: url("images/DSC04494.jpg");
+	border-radius: 2em;
 }
-#style-cont {
+#style-cont {;
 	position: absolute;
 	width: 100%;
 	height: 120%;
-	background: linear-gradient(317.7deg, rgba(0, 0, 0, 0.4) 0%, rgba(255, 255, 255, 0.4) 105.18%), #EBECF0;
-	background-blend-mode: soft-light, normal;
-	box-shadow: -12px -12px 23px #FAFBFF, 12px 12px 23px #A6ABBD;
-	border-radius: 54.5449px;
   	left: 50%;
   	top: 50%;
-  	-webkit-transform: translate(-50%, -50%);
+	background-color: cadetblue;
+	-webkit-transform: translate(-50%, -50%);
   	transform: translate(-50%, -50%);
-	z-index: -9999;
+	border-radius: 2em;
 }
+.overlay {
+	border-radius: 2em;
+	position: absolute;
+	top: -10%;
+	width: 100%;
+	height: 100%;
+}
+#model-cont {
+	position: absolute;
+	top: -10%;
+	width: 100%;
+	height: 100%;
+}
+#model {
+	position: absolute;
+	width: 400px;
+	height: 400px;
+	
+}
+#model:hover {
+	cursor: url('https://www.google.com/intl/en_ALL/mapfiles/openhand.cur'), all-scroll;
+  	cursor: -webkit-grab;
+  	cursor: -moz-grab;
+  	cursor: -o-grab;
+  	cursor: -ms-grab;
+  	cursor: grab;
+}
+#model:active {
+	cursor: url('https://www.google.com/intl/en_ALL/mapfiles/closedhand.cur'), all-scroll;
+  	cursor: -webkit-grabbing;
+  	cursor: -moz-grabbing;
+  	cursor: -o-grabbing;
+  	cursor: -ms-grabbing;
+  	cursor: grabbing;
+}	
+	
+	
 #set-panel {
-	background: linear-gradient(317.7deg, rgba(0, 0, 0, 0.4) 0%, rgba(255, 255, 255, 0.4) 105.18%), #EBECF0;
-	background-blend-mode: soft-light, normal;
-	box-shadow: -12px -12px 23px #FAFBFF, 12px 12px 23px #A6ABBD;
-	border-radius: 54.5449px;
+	display: flex;
+	flex-direction: column;
 	position:absolute;
 	width: 25%;
 	height: 60%;
@@ -62,19 +82,1242 @@ html, body {
   	top: 50%;
   	-webkit-transform: translate(-50%, -50%);
   	transform: translate(-50%, -50%);
+	border-radius: 2em;
 }
-.set-button {
+#zoom-panel {
+	background-color: chocolate;
+	position:absolute;
+	width: 15%;
+	height: 60%;
+  	left: 10%;
+  	top: 50%;
+  	-webkit-transform: translate(-50%, -50%);
+  	transform: translate(-50%, -50%);
+	border-radius: 2em;
+}
+#button-col {
+	margin-top: auto;
+}
+#shutter-button {
+	position: absolute;
+	top: 30%;
+	left: 15%;
 	border: none;
 	padding: 0;
-	margin-top: 30%;
-	margin-left: 10%;
+	width: 25%;
+	aspect-ratio: 1 / 1;
+	border-radius: 116.053px;
+}
+#aperture-button {
+	position: absolute;
+	top: 60%;
+	left: 15%;
+	border: none;
+	padding: 0;
+	width: 25%;
+	aspect-ratio: 1 / 1;
+	border-radius: 116.053px;
+}
+#mode-button {
+	position: absolute;
+	top: 35%;
+	left: 50%;
+	border: none;
+	padding: 0;
+	width: 30%;
+	aspect-ratio: 1 / 1;
+	border-radius: 116.053px;
+}
+.indicator {
+	background-color: #FF4F00;		
+}
+	#mode-ind {
+		position: absolute;
+		width: 3%;
+		height: 1%;	
+		border-radius: 2em;
+		top: 48%;
+		left: 85%;
+	}
+	#light-ind {
+		position: absolute;
+		width: 3%;
+		height: 1%;	
+		border-radius: 2em;
+		top: 80%;
+		left: 80%;
+	}
+	#shutter-ind {
+		position: absolute;
+		width: 3%;
+		height: 1%;	
+		border-radius: 2em;
+		top: 41%;
+		left: 8%;
+	}
+	#aperture-ind {
+		position: absolute;
+		width: 3%;
+		height: 1%;	
+		border-radius: 2em;
+		top: 72%;
+		left: 8%;
+	}
+	#style-ind {
+		position: absolute;
+		width: 0.5%;
+		height: 3%;
+		border-radius: 2em;
+		top: 96.5%;
+		left: 50%;
+	}
+	#zoom-ind {
+		position: absolute;
+		width: 6%;
+		height: 1%;
+		border-radius: 2em;
+		top: 50%;
+		left: 3%;
+	}
+
+#light-button {
+	position: absolute;
+	top: 70%;
+	left: 55%;
+	border: none;
+	padding: 0;
 	width: 20%;
 	aspect-ratio: 1 / 1;
-background: -webkit-linear-gradient(277deg, rgba(0, 0, 0, 0.4) 0%, rgba(255, 255, 255, 0.4) 105.18), #EBECF0;
-background: -o-linear-gradient(277deg, rgba(0, 0, 0, 0.4) 0%, rgba(255, 255, 255, 0.4) 105.18), #EBECF0;
-background: linear-gradient(7deg, rgba(0, 0, 0, 0.4) 0%, rgba(255, 255, 255, 0.4) 105.18), #EBECF0;
-background-blend-mode: soft-light, normal;
-box-shadow: -12px -12px 23px #FAFBFF, 12px 12px 23px #A6ABBD;
-border-radius: 116.053px;
-
+	border-radius: 116.053px;
 }
+#iso-button {
+	position: absolute;
+	top: 28%;
+	left: 55%;
+	border: none;
+	padding: 0;
+	width: 20%;
+	height: 7%;
+	aspect-ratio: 1 / 1;
+	border-radius: 53.8097px;
+}
+#back-button {
+	position: absolute;
+	top: 5%;
+	left: 5%;
+	border: none;
+	padding: 0;
+	width: 10%;
+	height: 5%;
+	aspect-ratio: 1 / 1;
+	border-radius: 53.8097px;
+}
+#next-button {
+	position: absolute;
+	top: 5%;
+	left: 18%;
+	border: none;
+	padding: 0;
+	width: 10%;
+	height: 5%;
+	aspect-ratio: 1 / 1;
+	border-radius: 53.8097px;
+}
+#shoot-button {
+	position: absolute;
+	top: 5%;
+	left: 70%;
+	border: none;
+	padding: 0;
+	width: 20%;
+	height: 8%;
+	aspect-ratio: 1 / 1;
+	border-radius: 53.8097px;
+}
+.distance-button {
+	position: absolute;
+	top: 95%;
+	left: 2%;
+	border: none;
+	padding: 0;
+	width: 96%;
+	height: 10%;
+	aspect-ratio: 1 / 1;
+	border-radius: 2em;
+}
+.focus-button {
+	position: absolute;
+	top: 5%;
+	left: 62%;
+	width: 25%;
+	height: 90%;
+	border: none;
+	padding: 0;
+	aspect-ratio: 1 / 1;
+	border-radius: 2em;
+}
+.zoom-button {
+	position: absolute;
+	top: 5%;
+	left: 12%;
+	border: none;
+	padding: 0;
+	width: 40%;
+	height: 90%;
+	aspect-ratio: 1 / 1;
+	border-radius: 2em;
+}
+.tutorial {
+	background-color: #FF4F00;
+	opacity: 0.5;
+	visibility: hidden;
+}
+.tutorial {
+	-webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+#image-tutorial {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: -10%;
+	border-radius: 2em;	
+}
+
+#distance-tutorial {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	opacity: 0.5;
+}
+#focus-tutorial {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+#zoom-tutorial {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+#shutter-tutorial {
+	width: 100%;
+	height: 100%;
+	border-radius: 10em;
+}
+#aperture-tutorial {
+	width: 100%;
+	height: 100%;
+	border-radius: 10em;
+}
+#mode-tutorial {
+	width: 100%;
+	height: 100%;
+	border-radius: 10em;
+}
+#light-tutorial {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 10em;
+}
+#next-tutorial {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 10em;
+}
+#back-tutorial {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 10em;
+}
+#shoot-tutorial {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 10em;
+}
+
+
+
+
+.tutorial-block {
+	background-color: #FF4F00;
+	opacity: 0.8;
+	border-radius: 1em;
+	visibility: hidden;
+	cursor: pointer;
+}
+.tutorial-block {
+	-webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.tutorial-text {
+	color: white;
+	font-family: OpenSans; 
+	aspect-ratio: 1/1;
+	position: absolute;
+	width: 90%;
+	left: 5%;
+	top: 3%;
+	cursor: pointer;
+	font-size: 0.80vw;
+}
+#disp-tutorial {
+	left: 30%;
+	top: 10%;
+	z-index: 9999;
+	position: absolute;
+	width: 30%;
+	height: 10%;
+	aspect-ratio: 1/1;
+}
+#dist-tutorial {
+	left: 30%;
+	top: 85%;
+	z-index: 9999;
+	position: absolute;
+	width: 30%;
+	height: 10%;
+	aspect-ratio: 1/1;
+}
+#shut-tutorial {
+	left: 64%;
+	top: 36%;
+	z-index: 9999;
+	position: absolute;
+	width: 10%;
+	height: 30%;
+	aspect-ratio: 1/1;
+}
+#apt-tutorial {
+	left: 64%;
+	top: 55%;
+	z-index: 9999;
+	position: absolute;
+	width: 10%;
+	height: 27%;
+	aspect-ratio: 1/1;
+}
+#md-tutorial {
+	left: 74%;
+	top: 40%;
+	z-index: 9999;
+	position: absolute;
+	width: 10%;
+	height: 27%;
+	aspect-ratio: 1/1;
+}
+#lht-tutorial {
+	left: 74%;
+	top: 62%;
+	z-index: 9999;
+	position: absolute;
+	width: 10%;
+	height: 15%;
+	aspect-ratio: 1/1;
+}
+#bn-tutorial {
+	left: 74%;
+	top: 30%;
+	z-index: 9999;
+	position: absolute;
+	width: 10%;
+	height: 16%;
+	aspect-ratio: 1/1;
+}
+#sh-tutorial {
+	left: 85%;
+	top: 32%;
+	z-index: 9999;
+	position: absolute;
+	width: 10%;
+	height: 6%;
+	aspect-ratio: 1/1;
+}
+#fc-tutorial {
+	left: 17%;
+	top: 45%;
+	z-index: 9999;
+	position: absolute;
+	width: 10%;
+	height: 19%;
+	aspect-ratio: 1/1;
+}
+#zm-tutorial {
+	left: 11%;
+	top: 45%;
+	z-index: 9999;
+	position: absolute;
+	width: 10%;
+	height: 24%;
+	aspect-ratio: 1/1;
+}
+
+#tutorial-button {
+	border: none;
+	position: absolute;
+	width: 22%;
+	height: 5%;
+	top: 5%;
+	left: 38%;
+	border-radius: 2em;
+	font-family: OpenSans; 
+	font-weight: normal;
+	text-align: center;
+	font-size: 0.7vw;
+}
+#tutorial-button:active {
+	background: linear-gradient(317.7deg, rgba(0, 0, 0, 0.4) 0%, rgba(255, 255, 255, 0.4) 105.18%), #EBECF0;
+	background-blend-mode: soft-light, normal;
+	box-shadow: inset -6px -6px 11px #FAFBFF, inset 6px 6px 11px #A6ABBD;
+}
+}
+@media only screen and (min-width: 0px) and (max-width: 980px) and (orientation: landscape) {
+	#camera-body {
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+#display {
+	position:absolute;
+	width: 50%;
+	height: 50%;
+  	left: 45%;
+  	top: 50%;
+  	-webkit-transform: translate(-50%, -50%);
+  	transform: translate(-50%, -50%);
+}
+#bg-image {
+	position: absolute;
+	top: -10%;
+	width: 100%;
+	height: 100%;
+	border-radius: 1em;
+	background-size: cover;
+}
+#style-cont {
+	position: absolute;
+	width: 100%;
+	height: 120%;
+  	left: 50%;
+  	top: 50%;
+	background-color: cadetblue;
+	-webkit-transform: translate(-50%, -50%);
+  	transform: translate(-50%, -50%);
+	border-radius: 1em;
+}
+#model-cont {
+	position: absolute;
+	top: -10%;
+	width: 100%;
+	height: 100%;
+}
+#model {
+	position: absolute;
+	width: 400px;
+	height: 400px;
+	
+}
+.overlay {
+	border-radius: 1em;
+	position: absolute;
+	top: -10%;
+	width: 100%;
+	height: 100%;
+}
+#set-panel {
+	background-color: aquamarine;
+	position:absolute;
+	width: 25%;
+	height: 60%;
+  	left: 85%;
+  	top: 50%;
+  	-webkit-transform: translate(-50%, -50%);
+  	transform: translate(-50%, -50%);
+	border-radius: 1em;
+}
+#zoom-panel {
+	background-color: chocolate;
+	position:absolute;
+	width: 15%;
+	height: 60%;
+  	left: 10%;
+  	top: 50%;
+  	-webkit-transform: translate(-50%, -50%);
+  	transform: translate(-50%, -50%);
+	border-radius: 1em;
+}
+#button-col {
+	margin-top: auto;
+}
+#shutter-button {
+	position: absolute;
+	top: 30%;
+	left: 15%;
+	border: none;
+	padding: 0;
+	width: 25%;
+	aspect-ratio: 1 / 1;
+	border-radius: 116.053px;
+}
+#aperture-button {
+	position: absolute;
+	top: 60%;
+	left: 15%;
+	border: none;
+	padding: 0;
+	width: 25%;
+	aspect-ratio: 1 / 1;
+	border-radius: 116.053px;
+}
+#mode-button {
+	position: absolute;
+	top: 35%;
+	left: 50%;
+	border: none;
+	padding: 0;
+	width: 30%;
+	aspect-ratio: 1 / 1;
+	border-radius: 116.053px;
+}
+.indicator {
+	background-color: #FF4F00;		
+}
+	#mode-ind {
+		position: absolute;
+		width: 3%;
+		height: 1%;	
+		border-radius: 2em;
+		top: 45.5%;
+		left: 85%;
+	}
+	#light-ind {
+		position: absolute;
+		width: 3%;
+		height: 1%;	
+		border-radius: 2em;
+		top: 77%;
+		left: 80%;
+	}
+	#shutter-ind {
+		position: absolute;
+		width: 3%;
+		height: 1%;	
+		border-radius: 2em;
+		top: 38.5%;
+		left: 8%;
+	}
+	#aperture-ind {
+		position: absolute;
+		width: 3%;
+		height: 1%;	
+		border-radius: 2em;
+		top: 69%;
+		left: 8%;
+	}
+	#style-ind {
+		position: absolute;
+		width: 0.5%;
+		height: 3%;
+		border-radius: 2em;
+		top: 96.5%;
+		left: 50%;
+	}
+	#zoom-ind {
+		position: absolute;
+		width: 6%;
+		height: 1%;
+		border-radius: 2em;
+		top: 50%;
+		left: 3%;
+	}
+
+#light-button {
+	position: absolute;
+	top: 70%;
+	left: 55%;
+	border: none;
+	padding: 0;
+	width: 20%;
+	aspect-ratio: 1 / 1;
+	border-radius: 116.053px;
+}
+#iso-button {
+	position: absolute;
+	top: 28%;
+	left: 55%;
+	border: none;
+	padding: 0;
+	width: 20%;
+	height: 7%;
+	aspect-ratio: 1 / 1;
+	border-radius: 53.8097px;
+}
+#back-button {
+	position: absolute;
+	top: 5%;
+	left: 5%;
+	border: none;
+	padding: 0;
+	width: 10%;
+	height: 5%;
+	aspect-ratio: 1 / 1;
+	border-radius: 53.8097px;
+}
+#next-button {
+	position: absolute;
+	top: 5%;
+	left: 18%;
+	border: none;
+	padding: 0;
+	width: 10%;
+	height: 5%;
+	aspect-ratio: 1 / 1;
+	border-radius: 53.8097px;
+}
+#shoot-button {
+	position: absolute;
+	top: 5%;
+	left: 70%;
+	border: none;
+	padding: 0;
+	width: 20%;
+	height: 8%;
+	aspect-ratio: 1 / 1;
+	border-radius: 53.8097px;
+}
+.distance-button {
+	position: absolute;
+	top: 95%;
+	left: 2%;
+	border: none;
+	padding: 0;
+	width: 96%;
+	height: 10%;
+	aspect-ratio: 1 / 1;
+	border-radius: 2em;
+}
+.focus-button {
+	position: absolute;
+	top: 5%;
+	left: 62%;
+	width: 25%;
+	height: 90%;
+	border: none;
+	padding: 0;
+	aspect-ratio: 1 / 1;
+	border-radius: 2em;
+}
+.zoom-button {
+	position: absolute;
+	top: 5%;
+	left: 12%;
+	border: none;
+	padding: 0;
+	width: 40%;
+	height: 90%;
+	aspect-ratio: 1 / 1;
+	border-radius: 2em;
+}
+	
+	
+	
+	
+.tutorial {
+	background-color: #FF4F00;
+	opacity: 0.5;
+	visibility: hidden;
+}
+.tutorial {
+	-webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+#image-tutorial {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: -10%;
+	border-radius: 1em;	
+}
+
+#distance-tutorial {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	opacity: 0.5;
+}
+#focus-tutorial {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+#zoom-tutorial {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+#shutter-tutorial {
+	width: 100%;
+	height: 100%;
+	border-radius: 10em;
+}
+#aperture-tutorial {
+	width: 100%;
+	height: 100%;
+	border-radius: 10em;
+}
+#mode-tutorial {
+	width: 100%;
+	height: 100%;
+	border-radius: 10em;
+}
+#light-tutorial {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 10em;
+}
+#next-tutorial {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 10em;
+}
+#back-tutorial {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 10em;
+}
+#shoot-tutorial {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 10em;
+}
+
+
+
+
+.tutorial-block {
+	background-color: #FF4F00;
+	opacity: 0.8;
+	border-radius: 0.5em;
+	visibility: hidden;
+	cursor: pointer;
+}
+.tutorial-block {
+	-webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.tutorial-text {
+	color: white;
+	font-family: OpenSans; 
+	aspect-ratio: 1/1;
+	position: absolute;
+	width: 90%;
+	left: 5%;
+	top: 6%;
+	cursor: pointer;
+	font-size: 0.9vw;
+}
+#disp-tutorial {
+	left: 30%;
+	top: 10%;
+	z-index: 9999;
+	position: absolute;
+	width: 30%;
+	height: 10%;
+	aspect-ratio: 1/1;
+}
+#dist-tutorial {
+	left: 30%;
+	top: 85%;
+	z-index: 9999;
+	position: absolute;
+	width: 30%;
+	height: 10%;
+	aspect-ratio: 1/1;
+}
+#shut-tutorial {
+	left: 64%;
+	top: 36%;
+	z-index: 9999;
+	position: absolute;
+	width: 10%;
+	height: 30%;
+	aspect-ratio: 1/1;
+}
+#apt-tutorial {
+	left: 64%;
+	top: 55%;
+	z-index: 9999;
+	position: absolute;
+	width: 10%;
+	height: 27%;
+	aspect-ratio: 1/1;
+}
+#md-tutorial {
+	left: 74%;
+	top: 40%;
+	z-index: 9999;
+	position: absolute;
+	width: 10%;
+	height: 27%;
+	aspect-ratio: 1/1;
+}
+#lht-tutorial {
+	left: 74%;
+	top: 62%;
+	z-index: 9999;
+	position: absolute;
+	width: 10%;
+	height: 15%;
+	aspect-ratio: 1/1;
+}
+#bn-tutorial {
+	left: 74%;
+	top: 30%;
+	z-index: 9999;
+	position: absolute;
+	width: 10%;
+	height: 16%;
+	aspect-ratio: 1/1;
+}
+#sh-tutorial {
+	left: 85%;
+	top: 32%;
+	z-index: 9999;
+	position: absolute;
+	width: 10%;
+	height: 8%;
+	aspect-ratio: 1/1;
+}
+#fc-tutorial {
+	left: 17%;
+	top: 45%;
+	z-index: 9999;
+	position: absolute;
+	width: 10%;
+	height: 19%;
+	aspect-ratio: 1/1;
+}
+#zm-tutorial {
+	left: 11%;
+	top: 45%;
+	z-index: 9999;
+	position: absolute;
+	width: 10%;
+	height: 24%;
+	aspect-ratio: 1/1;
+}
+
+#tutorial-button {
+	font-size: 0.7vw;
+	border: none;
+	position: absolute;
+	width: 25%;
+	height: 5%;
+	top: 5%;
+	left: 38%;
+	border-radius: 2em;
+	font-family: OpenSans; 
+	font-weight: normal;
+	text-align: center;
+}
+#tutorial-button:active {
+	background: linear-gradient(317.7deg, rgba(0, 0, 0, 0.4) 0%, rgba(255, 255, 255, 0.4) 105.18%), #EBECF0;
+	background-blend-mode: soft-light, normal;
+	box-shadow: inset -6px -6px 11px #FAFBFF, inset 6px 6px 11px #A6ABBD;
+}
+}
+
+
+
+/*styling elements*/
+#model-cont{
+	z-index: -97;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+	touch-action: none;
+}
+#model {
+	z-index: -96;
+	touch-action: none;
+	background-image: url("images/pngegg.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+    user-select: none;
+	background-position: bottom;
+}
+.overlay {
+	z-index: -99;
+}
+#bg-image {
+	z-index: -999;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	background-position: center;
+	background-size: 1000px;
+	aspect-ratio: 1 / 1;
+	
+}
+#bg-image {
+	-webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+#style-cont {
+	z-index: -9999;
+	background: linear-gradient(317.7deg, rgba(0, 0, 0, 0.4) 0%, rgba(255, 255, 255, 0.4) 105.18%), #EBECF0;
+	background-blend-mode: soft-light, normal;
+	box-shadow: -12px -12px 23px #FAFBFF, 12px 12px 23px #A6ABBD;
+}
+.distance-button {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+	touch-action: none;
+	z-index: -94;
+	background: linear-gradient(317.7deg, rgba(0, 0, 0, 0.4) 0%, rgba(255, 255, 255, 0.4) 105.18%), #EBECF0;
+	background-blend-mode: soft-light, normal;
+	border: 1px solid rgba(255, 255, 255, 0.4);
+	box-sizing: border-box;
+	box-shadow: inset -5px -5px 10px #FAFBFF, inset 5px 5px 10px #A6ABBD;
+	border-radius: 2em;
+}
+#distance-bg {
+	user-select: none;
+	touch-action: none;
+	position: absolute;
+	z-index: -93;
+	width: 200%;
+	height: 50%;
+	top: 29%;
+	left: -35%;
+	background-image: url("images/Group.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+#distance-bg:hover {
+	cursor: url('https://www.google.com/intl/en_ALL/mapfiles/openhand.cur'), all-scroll;
+  	cursor: -webkit-grab;
+  	cursor: -moz-grab;
+  	cursor: -o-grab;
+  	cursor: -ms-grab;
+  	cursor: grab;
+}
+#distance-bg:active {
+	cursor: url('https://www.google.com/intl/en_ALL/mapfiles/closedhand.cur'), all-scroll;
+  	cursor: -webkit-grabbing;
+  	cursor: -moz-grabbing;
+  	cursor: -o-grabbing;
+  	cursor: -ms-grabbing;
+  	cursor: grabbing;
+}
+#zoom-panel {
+	background: linear-gradient(317.7deg, rgba(0, 0, 0, 0.4) 0%, rgba(255, 255, 255, 0.4) 105.18%), #EBECF0;
+	background-blend-mode: soft-light, normal;
+	box-shadow: -12px -12px 23px #FAFBFF, 12px 12px 23px #A6ABBD;
+	overflow: hidden;
+}
+.focus-button {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+	touch-action: none;
+	z-index: -90;
+	background: linear-gradient(317.7deg, rgba(0, 0, 0, 0.4) 0%, rgba(255, 255, 255, 0.4) 105.18%), #EBECF0;
+	background-blend-mode: soft-light, normal;
+	border: 1px solid rgba(255, 255, 255, 0.4);
+	box-sizing: border-box;
+	box-shadow: inset -5px -5px 10px #FAFBFF, inset 5px 5px 10px #A6ABBD;
+	border-radius: 2em;
+}
+#focus-bg {
+	user-select: none;
+	touch-action: none;
+	position: absolute;
+	z-index: -89;
+	width: 50%;
+	height: 200%;
+	top: -30%;
+	left: 27%;
+	background-image: url("images/Group 3.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+#focus-bg:hover {
+	cursor: url('https://www.google.com/intl/en_ALL/mapfiles/openhand.cur'), all-scroll;
+  	cursor: -webkit-grab;
+  	cursor: -moz-grab;
+  	cursor: -o-grab;
+  	cursor: -ms-grab;
+  	cursor: grab;
+}
+#focus-bg:active {
+	cursor: url('https://www.google.com/intl/en_ALL/mapfiles/closedhand.cur'), all-scroll;
+  	cursor: -webkit-grabbing;
+  	cursor: -moz-grabbing;
+  	cursor: -o-grabbing;
+  	cursor: -ms-grabbing;
+  	cursor: grabbing;
+}
+.zoom-button {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+	touch-action: none;
+	z-index: -95;
+	background: linear-gradient(317.7deg, rgba(0, 0, 0, 0.4) 0%, rgba(255, 255, 255, 0.4) 105.18%), #EBECF0;
+	background-blend-mode: soft-light, normal;
+	border: 1.14489px solid rgba(255, 255, 255, 0.4);
+	box-shadow: inset -6px -6px 11px #FAFBFF, inset 6px 6px 11px #A6ABBD;
+}
+#zoom-bg {
+	user-select: none;
+	touch-action: none;
+	position: absolute;
+	z-index: -89;
+	width: 60%;
+	height: 250%;
+	top: 0%;
+	left: 27%;
+	background-image: url("images/Group2.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+#zoom-bg:hover {
+	cursor: url('https://www.google.com/intl/en_ALL/mapfiles/openhand.cur'), all-scroll;
+  	cursor: -webkit-grab;
+  	cursor: -moz-grab;
+  	cursor: -o-grab;
+  	cursor: -ms-grab;
+  	cursor: grab;
+}
+#zoom-bg:active {
+	cursor: url('https://www.google.com/intl/en_ALL/mapfiles/closedhand.cur'), all-scroll;
+  	cursor: -webkit-grabbing;
+  	cursor: -moz-grabbing;
+  	cursor: -o-grabbing;
+  	cursor: -ms-grabbing;
+  	cursor: grabbing;
+}
+#set-panel {
+	background: linear-gradient(317.7deg, rgba(0, 0, 0, 0.4) 0%, rgba(255, 255, 255, 0.4) 105.18%), #EBECF0;
+	background-blend-mode: soft-light, normal;
+	box-shadow: -12px -12px 23px #FAFBFF, 12px 12px 23px #A6ABBD;
+}
+.set-button {
+	background: linear-gradient(317.7deg, rgba(0, 0, 0, 0.4) 0%, rgba(255, 255, 255, 0.4) 105.18%), #EBECF0;
+	background-blend-mode: soft-light, normal;
+	box-shadow: -12px -12px 23px #FAFBFF, 12px 12px 23px #A6ABBD;
+}
+#aperture-button {
+	z-index: -91;	
+}
+
+#aparture-bg {
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-image: url("images/apature-bg.png");
+	width: 90%;
+	height: 90%;
+	z-index: -90;
+	position: absolute;
+	top: 6%;
+	left: 6%;
+	cursor: pointer;
+}
+#shutter-button {
+	z-index: -91;
+}
+#shutter-bg {
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-image: url("images/shutter-bg.png");
+	width: 90%;
+	height: 90%;
+	z-index: -90;
+	position: absolute;
+	top: 6%;
+	left: 6%;
+	cursor: pointer;
+}
+#mode-button {
+	z-index: -91;
+}
+#mode-bg {
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-image: url("images/Mode-bg.png");
+	width: 90%;
+	height: 90%;
+	z-index: -90;
+	position: absolute;
+	top: 6%;
+	left: 6%;
+	cursor: pointer;
+}
+#light-button {
+	z-index: -91;
+}
+#light-cont {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+}
+#light-bg {
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-image: url("images/light-bg.png");
+	width: 85%;
+	height: 85%;
+	z-index: -90;
+	position: absolute;
+	top: 3%;
+	left: 16%;
+	cursor: pointer;
+}
+#back-button {
+	z-index: -91;
+}
+#back-bg {
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-image: url("images/back.png");
+	width: 50%;
+	height: 50%;
+	z-index: -90;
+	position: absolute;
+	top: 25%;
+	left: 25%;
+	cursor: pointer;
+	background-position: center;
+}
+#back-button:active {
+	background: linear-gradient(317.7deg, rgba(0, 0, 0, 0.4) 0%, rgba(255, 255, 255, 0.4) 105.18%), #EBECF0;
+	background-blend-mode: soft-light, normal;
+	box-shadow: inset -6px -6px 11px #FAFBFF, inset 6px 6px 11px #A6ABBD;
+}
+#next-button {
+	z-index: -91;
+}
+#next-bg {
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-image: url("images/next.png");
+	width: 50%;
+	height: 50%;
+	z-index: -90;
+	position: absolute;
+	top: 25%;
+	left: 25%;
+	cursor: pointer;
+	background-position: center;
+}
+#shoot-button {
+	z-index: -91;
+}
+#shoot-button:active {
+	background: linear-gradient(317.7deg, rgba(0, 0, 0, 0.4) 0%, rgba(255, 255, 255, 0.4) 105.18%), #EBECF0;
+	background-blend-mode: soft-light, normal;
+	box-shadow: inset -6px -6px 11px #FAFBFF, inset 6px 6px 11px #A6ABBD;
+}
+#shoot-ind {
+	position: absolute;
+	width: 50%;
+	height: 30%;
+	top: 35%;
+	left: 25%;
+	border-radius: 2em;
+}
+#next-button:active {
+	background: linear-gradient(317.7deg, rgba(0, 0, 0, 0.4) 0%, rgba(255, 255, 255, 0.4) 105.18%), #EBECF0;
+	background-blend-mode: soft-light, normal;
+		box-shadow: inset -6px -6px 11px #FAFBFF, inset 6px 6px 11px #A6ABBD;
+}
+#aparture-bg {
+	-webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+#shutter-bg {
+	-webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+#mode-bg {
+	-webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+#light-cont {
+	-webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+#back-button {
+	-webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+#next-button {
+	-webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+#shoot-button {
+	-webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+
+
+#darken_overlay {
+	background: black;
+	opacity: 0;
+}
+#light_overlay {
+	background: white;
+	opacity: 0;
+}
+@font-face {
+	font-family: OpenSans;
+	src: url("fonts/OpenSans-Regular.ttf");
+	font-style: normal; 
+	font-weight: normal; 
+}
+
+
