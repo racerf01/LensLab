@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>LensLab</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<div id="disp-tutorial" class="tutorial-block" onclick="tutorial_start()">
+		<div id="disp-tutoral-text" class="tutorial-text">On the camera screen, you can change the position of the model in the frame. It is important to take into account the lighting and how a person looks in the scene.     CLICK ON THE HINTS  TO CONTINUE</div>
+	</div>
+	
+	<div id="dist-tutorial" class="tutorial-block" onclick="tutorial_start()">
+		<div id="dist-tutoral-text" class="tutorial-text">With this ring, you can adjust the distance between the camera and the person. The closer a person is to the camera, the greater the bokeh effect (blurred background).</div>
+	</div>
+	
+	<div id="shut-tutorial" class="tutorial-block" onclick="tutorial_start()">
+		<div id="shutter-tutoral-text" class="tutorial-text">This is the shutter speed wheel. It determines the speed at which the shutter closes, therefore, the lower the value, the less light falls on the camera matrix. This helps to make the scene darker if there is too much light.</div>
+	</div>
+	
+	<div id="apt-tutorial" class="tutorial-block" onclick="tutorial_start()">
+		<div id="apt-tutoral-text" class="tutorial-text">This is the diaphragm wheel. It determines how wide the lens aperture is, which also affects the light entering the camera matrix. With this wheel, you can adjust the darkening of the background.</div>
+	</div>
+	
+	<div id="md-tutorial" class="tutorial-block" onclick="tutorial_start()">
+		<div id="md-tutoral-text" class="tutorial-text">This is the diaphragm wheel. It determines how wide the lens aperture is, which also affects the light entering the camera matrix. With this wheel, you can adjust the darkening of the background.</div>
+	</div>
+	
+	<div id="lht-tutorial" class="tutorial-block" onclick="tutorial_start()">
+		<div id="lht-tutoral-text" class="tutorial-text">This is the lighting wheel. With it, you can change the filter applied to the image on the display.</div>
+	</div>
+	
+	<div id="bn-tutorial" class="tutorial-block" onclick="tutorial_start()">
+		<div id="bn-tutoral-text" class="tutorial-text">With these two buttons, you can change the shooting location: park, city and photo studio with a white background.</div>
+	</div>
+	
+	<div id="sh-tutorial" class="tutorial-block" onclick="tutorial_start()">
+		<div id="sh-tutoral-text" class="tutorial-text">Is the stage set? Is the model ready? Shoot!</div>
+	</div>
+	
+	<div id="fc-tutorial" class="tutorial-block" onclick="tutorial_start()">
+		<div id="fc-tutoral-text" class="tutorial-text">Using the focus ring, you can adjust the blurring of the background or your model. The main thing is to find the right value.</div>
+	</div>
+	
+	<div id="zm-tutorial" class="tutorial-block" onclick="tutorial_start()">
+		<div id="zm-tutoral-text" class="tutorial-text">Using the zoom ring, you can zoom in on the model and the background without changing the distance between the camera and the person. But you can still change the distance.</div>
+	</div>
+
+	<section id="camera-body">
+		<span id="display">
+			<span id="image-disp">
+				<div id="image-tutorial" class="tutorial"></div>
+				<div id="model-cont">
+					<div id="model"></div>
+				</div>
+				<div id="first_overlay" class="overlay" data-blurlevel="0" style="backdropFilter: 'blur(0px')"></div>
+				<div id="second_overlay" class="overlay" data-blurlevel="0" style="backdropFilter: 'blur(0px')"></div>
+				<div id="darken_overlay" class="overlay"></div>
+				<div id="light_overlay" class="overlay"></div>
+				<div id="bg-image"></div>
+			</span>
+			<div class="distance-button">
+				<div id="distance-tutorial" class="tutorial"></div>
+				<div id="distance-bg"></div>
+			</div>
+			<div id="style-cont">
+				<div id="style-ind" class="indicator"></div>
+			</div>
+		</span>
+		<span id="set-panel">
+			<span id="button-col">
+				
+				<button id="tutorial-button" class="set-button" onclick="tutorial_start()">Tutorial Mode</button>
+				
+				<div id="shutter-ind" class="indicator"></div>
+				
+				<div id="shutter-button" class="set-button">
+					<div id="shutter-tutorial" class="tutorial"></div>
+					<div id="shutter-bg" onclick="changeSht()"></div>
+				</div>
+				
+				<div id="aperture-ind" class="indicator"></div>
+				
+				<div id="aperture-button" class="set-button">
+					<div id="aperture-tutorial" class="tutorial"></div>
+					<div id="aparture-bg" onclick="changeApt()"></div>
+				</div>
+				
+				<div id="mode-ind" class="indicator"></div>
+				
+				<div id="mode-button" class="set-button">
+					<div id="mode-tutorial" class="tutorial"></div>
+					<div id="mode-bg" onclick="changeMode()"></div>
+				</div>
+				
+				<div id="light-ind" class="indicator"></div>
+				
+				<div id="light-button" class="set-button">
+					<div id="light-tutorial" class="tutorial"></div>
+					<div id="light-cont" onclick="changeLight()">
+						<div id="light-bg"></div>
+					</div>
+				</div>
+				
+				<div id="back-button" class="set-button" onClick=" changeBGback()">
+					<div id="back-tutorial" class="tutorial"></div>
+					<div id="back-bg" ></div>
+				</div>
+				
+				<div id="next-button" class="set-button" onClick="changeBGnext()">
+					<div id="next-tutorial" class="tutorial"></div>
+					<div id="next-bg" ></div>
+				</div>
+				
+				<div id="shoot-button" class="set-button" onClick="shoot()">
+					<div id="shoot-tutorial" class="tutorial"></div>
+					<div id="shoot-ind" class="indicator"></div>
+				</div>
+			</span>
+		</span>
+		<span id="zoom-panel">
+				<div id="zoom-ind" class="indicator"></div>
+				<div class="focus-button">
+					<div id="focus-tutorial" class="tutorial"></div>
+					<div id="focus-bg"></div>
+				</div>
+				<div class="zoom-button">
+					<div id="zoom-tutorial" class="tutorial"></div>
+					<div id="zoom-bg"></div>
+				</div>
+		</span>
+	</section>
+	<script src="scripts/script.js"></script>
+	<script src="scripts/drag-dist.js"></script>
+	<script src="scripts/drag-image.js"></script>
+	<script src="scripts/drag-zoom.js"></script>
+</body>
+</html>
