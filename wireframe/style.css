@@ -177,7 +177,7 @@ html, body {
 	width: 40%;
 	height: 90%;
 	aspect-ratio: 1 / 1;
-	border-radius: 35px;
+	border-radius: 2em;
 }
 }
 @media only screen and (min-width: 0px) and (max-width: 980px) and (orientation: landscape) {
