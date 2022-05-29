@@ -274,12 +274,12 @@ function changeBGnext() {
 		count5 += 1;
 		rot4 += 0;
 		if (count5 === 1) {
-			bg.style.backgroundImage = "url('/images/pexels-abby-chung-1191377.jpg')"
+			bg.style.backgroundImage = "url('images/pexels-abby-chung-1191377.jpg')"
 			backbutton.style.opacity = 1;
 			backEnabled = true;
 		}
 		if (count5 === 2) {
-			bg.style.backgroundImage = "url('/images/article-4.jpg')"
+			bg.style.backgroundImage = "url('images/article-4.jpg')"
 			nextEnabled = false;
 			nextbutton.style.opacity = 0.5;
 		}
@@ -293,12 +293,12 @@ function changeBGback() {
 		rot4 += 0;
 		count5 -= 1;
 		if (count5 === 1) {
-			bg.style.backgroundImage = "url('/images/pexels-abby-chung-1191377.jpg')"
+			bg.style.backgroundImage = "url('images/pexels-abby-chung-1191377.jpg')"
 			nextbutton.style.opacity = 1;
 			nextEnabled = true;
 		}
 		if (count5 === 0) {
-			bg.style.backgroundImage = "url('/images/pexels-pixabay-158028.jpg')"
+			bg.style.backgroundImage = "url('images/pexels-pixabay-158028.jpg')"
 			backEnabled = false;
 			backbutton.style.opacity = 0.5;
 		}
