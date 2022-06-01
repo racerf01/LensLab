@@ -7,6 +7,7 @@
 </head>
 
 <body>
+	<!--Text for tutorial mod blocks-->
 	<div id="disp-tutorial" class="tutorial-block" onclick="tutorial_start()">
 		<div id="disp-tutoral-text" class="tutorial-text">On the camera screen, you can change the position of the model in the frame. It is important to take into account the lighting and how a person looks in the scene.     CLICK ON THE HINTS  TO CONTINUE</div>
 	</div>
@@ -46,20 +47,23 @@
 	<div id="zm-tutorial" class="tutorial-block" onclick="tutorial_start()">
 		<div id="zm-tutoral-text" class="tutorial-text">Using the zoom ring, you can zoom in on the model and the background without changing the distance between the camera and the person. But you can still change the distance.</div>
 	</div>
-
+<!--section with elements of a camera simulator-->
 	<section id="camera-body">
+		<!--camera screen-->
 		<span id="display">
 			<span id="image-disp">
 				<div id="image-tutorial" class="tutorial"></div>
 				<div id="model-cont">
 					<div id="model"></div>
 				</div>
+				<!--overlays to darken or lighten various screen elements-->
 				<div id="first_overlay" class="overlay" data-blurlevel="0" style="backdropFilter: 'blur(0px')"></div>
 				<div id="second_overlay" class="overlay" data-blurlevel="0" style="backdropFilter: 'blur(0px')"></div>
 				<div id="darken_overlay" class="overlay"></div>
 				<div id="light_overlay" class="overlay"></div>
 				<div id="bg-image"></div>
 			</span>
+			<!--distance ring-->
 			<div class="distance-button">
 				<div id="distance-tutorial" class="tutorial"></div>
 				<div id="distance-bg"></div>
@@ -68,6 +72,7 @@
 				<div id="style-ind" class="indicator"></div>
 			</div>
 		</span>
+		<!--right panel with buttons-->
 		<span id="set-panel">
 			<span id="button-col">
 				
@@ -119,6 +124,7 @@
 				</div>
 			</span>
 		</span>
+		<!--left panel with zoom and focus settings-->
 		<span id="zoom-panel">
 				<div id="zoom-ind" class="indicator"></div>
 				<div class="focus-button">
@@ -131,6 +137,7 @@
 				</div>
 		</span>
 	</section>
+	<!--scripts for camera functions-->
 	<script src="scripts/script.js"></script>
 	<script src="scripts/drag-dist.js"></script>
 	<script src="scripts/drag-image.js"></script>
