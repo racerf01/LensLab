@@ -1,6 +1,6 @@
 
 
-
+//creating the necessary variables
 
 var aptbutton = document.getElementById('aparture-bg');
 var shtbutton = document.getElementById('shutter-bg');
@@ -40,6 +40,8 @@ var count4 = 0;
 var count5 = 0;
 var count6 = 0;
 
+
+//function for changing the aperture(aperture button)
 function changeApt() {
 	if (apatureEnabled) { 
 		aptbutton.style = 'transform: rotate(' + rot + 'deg)';
@@ -73,7 +75,7 @@ function changeApt() {
 		}
 	}
 }
-
+//function for changing the shutter speed(shutter speed button)
 function changeSht() {
 	if (shutterEnabled) {
 		shtbutton.style = 'transform: rotate(' + rot + 'deg)';
@@ -106,7 +108,7 @@ function changeSht() {
 		}
 	}
 }
-
+//function for changing the mode button
 function changeMode() {
 	modebutton.style = 'transform: rotate(' + rot2 + 'deg)';
 	rot2 += 90;
@@ -248,6 +250,7 @@ function changeMode() {
 		count3 = 0;
 	}
 }
+//function for changing the filter-change button
 function changeLight() {
 	lightbutton.style = 'transform: rotate(' + rot3 + 'deg)';
 	rot3 += 120;
@@ -267,7 +270,7 @@ function changeLight() {
 	}	
 }
 
-
+//function for changing the background-image with 2 buttons (next and back)
 function changeBGnext() {
 	if (nextEnabled) {
 		nextbutton.style = 'transform: rotate(' + rot4 + 'deg)';
@@ -286,7 +289,7 @@ function changeBGnext() {
 	}
 }
 
-
+//function for changing the background-image with 2 buttons (next and back)
 function changeBGback() {
 	if (backEnabled) {
 		backbutton.style = 'transform: rotate(' + rot4 + 'deg)';
@@ -304,6 +307,7 @@ function changeBGback() {
 		}
 	}
 }
+//playing the sound of shoot on click 
 function shoot() {
 	backbutton.style = 'transform: rotate(' + rot4 + 'deg)';
 	rot4 += 0;
@@ -314,7 +318,7 @@ function shoot() {
 var count7 = 0;
 
 
-
+//tutorial function for tracking at what stage the user is at
 function tutorial_start() {
 	backbutton.style = 'transform: rotate(' + rot4 + 'deg)';
 	rot4 += 0;
